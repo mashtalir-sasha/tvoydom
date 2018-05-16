@@ -1,38 +1,152 @@
 @import "vars"
 
+@media (min-width: 1800px)
+	.head-project
+		&:after, &:before
+			width: 85% !important
 
-/*==========  Desktop First  ==========*/
-
-
-//Extra large: ≥1200px
+//Extra large: ≥1440px
 +media-breakpoint-down(xl)
+	.head-project
+		&:after, &:before
+			width: 77%
 
-//Large: ≥992px
+//Large: ≥1200px  max-width: 1439px
 +media-breakpoint-down(lg)
 
-//Medium: ≥768px
+//Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.head-project
+		&:before, &:after
+			width: 70%
+		&__wrap
+			max-width: 100%
+			margin-right: 35%
+			&-second
+				margin-right: 0
+		&__ttl
+			font-size: 32px
+	.team-item
+		&_margin
+			margin-bottom: 40px
+	.foot
+		&__logo
+			float: right
+	.map
+		height: 250px
+		margin-top: 40px
+	.cprt
+		text-align: center
+		margin: 40px auto 0
 
-//Small: ≥576px
+//Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.head-project
+		&:before, &:after
+			width: 100%
+		&__wrap
+			float: none
+			margin-right: 0
+		&__name
+			color: #fff
+			&:before
+				left: 0
+				width: 100%
+		&__btn
+			&:before
+				display: none
+	.docs
+		&__note
+			display: none
+		&-img
+			&_i1
+				&:before
+					display: none
+	.specialization
+		&__note
+			display: none
+	.team
+		&__note
+			display: none
+	.question-wrap
+		&:before, &:after
+			display: none
+	.foot
+		&__logo
+			float: none
+			margin: 0 auto 40px
+		&__call
+			&:first-child
+				margin-top: 40px
 
-//Extra small: >0
+//Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
+	.nav
+		&__logo
+			max-width: 160px
+		&-btn
+			float: right
+	.head-project
+		&__ttl
+			font-size: 30px
+		&__name
+			margin-bottom: 10px
+		&__wrap
+			margin-top: 30px
+			&-second
+				margin-top: 0
+		&__btn
+			&:before
+				display: block
+				left: -25px
+	.team-item
+		&__name
+			font-size: 16px
+		&__txt
+			font-size: 14px
+	.foot-list
+		&__item
+			padding: 10px
+			margin: 0 25px
 
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.nav
+		&__logo
+			max-width: 100%
+		&-btn
+			width: 60px
+			height: 40px
+			background-size: 35px 20px
+			margin-right: 20px
+	.head-project
+		&__ttl
+			text-align: center
+			font-size: 26px
+			span
+				font-size: 40px
+		&__btn
+			float: none
+			margin: 40px auto 0
+	.docs
+		&__ttl
+			font-size: 20px
+	.specialization
+		display: none
+	.team
+		padding-top: 0
+		&__ttl
+			font-size: 20px
+	.question-wrap
+		&__ttl
+			font-size: 20px
+	.question-wrap
+		&__btn
+			max-width: 290px
+			font-size: 16px
+	.foot-list
+		&__item
+			display: block
+			margin: 0
+			padding: 10px 0
 
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)

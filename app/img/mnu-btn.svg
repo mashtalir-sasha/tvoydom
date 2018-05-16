@@ -1,0 +1,9 @@
+<svg viewBox="0 0 51 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Component">
+<path id="Rectangle 32" d="M 0 2C 0 0.895431 0.895431 0 2 0L 48.0211 0C 49.1256 0 50.0211 0.895431 50.0211 2L 50.0211 2.57627C 50.0211 3.68084 49.1256 4.57627 48.0211 4.57627L 2 4.57627C 0.895432 4.57627 0 3.68084 0 2.57627L 0 2Z" transform="translate(0 0.92334)" fill="#646060"/>
+<rect id="Rectangle 32.3" width="30.3158" height="4.57627" rx="2" transform="translate(10 13)" fill="#646060"/>
+<rect id="Rectangle 32.4" width="50.0211" height="4.57627" rx="2" transform="translate(0 25)" fill="#646060"/>
+</g>
+</g>
+</svg>

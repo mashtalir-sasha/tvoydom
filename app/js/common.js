@@ -77,4 +77,40 @@ $(function() {
 		e.preventDefault();
 	});
 
+	$('.projects-slider').slick({
+		arrows: false,
+		fade: true
+	});
+	$('.projects-slider-control .next-slide').on('click', function() {
+		$('.projects-slider').slick('slickNext');
+	});
+	$('.projects-slider-control .prev-slide').on('click', function() {
+		$('.projects-slider').slick('slickPrev');
+	});
+
+	var projectHeight = $('.projects-slider-item').innerHeight();
+	var projectHeightTtl = $('.projects-slider-item__ttl').innerHeight();
+	$('.projects-slider-item__info').css('height', projectHeight - projectHeightTtl);
+
+	$('.specialization__item_i1').mouseover(function() {
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img1.png)');
+	});
+	$('.specialization__item_i1').mouseout(function() {
+		$('.specialization__bg').css('background-image', '');
+	});
+
+	$('.specialization__item_i2').mouseover(function() {
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img2.png)');
+	});
+	$('.specialization__item_i2').mouseout(function() {
+		$('.specialization__bg').css('background-image', '');
+	});
+
+	$('.specialization__item_i3').mouseover(function() {
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img3.png)');
+	});
+	$('.specialization__item_i3').mouseout(function() {
+		$('.specialization__bg').css('background-image', '');
+	});
+
 });

@@ -9,16 +9,6 @@ $(function() {
 	e.preventDefault();
 	});
 
-	// Меню при скроле
-	$(window).scroll(function(){
-		var topline = $(window).scrollTop();
-		if ( topline > 650 ) {
-			$(".posf").addClass('show');
-		} else {
-			$(".posf").removeClass('show');
-		};
-	});
-
 	// Клик по гамбургеру на моб версии
 	$('.mob-mnu__humb').click(function() {
 		$('.mob-mnu-list').toggleClass('show');
@@ -43,40 +33,13 @@ $(function() {
 		$('.subject').val(subject);
 	});
 
-	// Отправка формы
-	$('form').submit(function() {
-		var data = $(this).serialize();
-		var goalId = $(this).find('input[ name="goal"]').val();
-		data += '&ajax-request=true';
-		$.ajax({
-			type: 'POST',
-			url: 'mail.php',
-			dataType: 'json',
-			data: data,
-			success: (function() {
-				$.fancybox.close();
-				$.fancybox.open('<div class="thn"><h3>Заявка отправлена!</h3><p>С Вами свяжутся в ближайшее время.</p></div>');
-				//gtag('event','submit',{'event_category':'submit','event_action':goalId});
-				//fbq('track', 'Lead');
-			})()
-		});
-		return false;
-	});
-
 	// Инит фансибокса
 	$('.fancybox, .modal').fancybox({
 		margin: 0,
 		padding: 0
 	});
 
-	//Якорь наверх
-	$("[href='#top']").click(function(e){
-		$('html, body').stop().animate({
-			scrollTop: $('#top').offset().top
-		}, 300);
-		e.preventDefault();
-	});
-
+	// Слайдер проектов
 	$('.projects-slider').slick({
 		arrows: false,
 		fade: true
@@ -88,29 +51,59 @@ $(function() {
 		$('.projects-slider').slick('slickPrev');
 	});
 
+	// Определение высоты проектов
 	var projectHeight = $('.projects-slider-item').innerHeight();
 	var projectHeightTtl = $('.projects-slider-item__ttl').innerHeight();
 	$('.projects-slider-item__info').css('height', projectHeight - projectHeightTtl);
 
+	// Наведение на специализацию
 	$('.specialization__item_i1').mouseover(function() {
-		$('.specialization__bg').css('background-image', 'url(img/specialization_img1.png)');
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img1.png)').fadeIn();
+		$('.specialization__txt_i1').css('opacity', '1');
 	});
 	$('.specialization__item_i1').mouseout(function() {
-		$('.specialization__bg').css('background-image', '');
+		$('.specialization__bg').fadeOut();
+		$('.specialization__txt_i1').css('opacity', '0');
 	});
-
 	$('.specialization__item_i2').mouseover(function() {
-		$('.specialization__bg').css('background-image', 'url(img/specialization_img2.png)');
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img2.png)').fadeIn();
+		$('.specialization__txt_i2').css('opacity', '1');
 	});
 	$('.specialization__item_i2').mouseout(function() {
-		$('.specialization__bg').css('background-image', '');
+		$('.specialization__bg').fadeOut();
+		$('.specialization__txt_i2').css('opacity', '0');
 	});
-
 	$('.specialization__item_i3').mouseover(function() {
-		$('.specialization__bg').css('background-image', 'url(img/specialization_img3.png)');
+		$('.specialization__bg').css('background-image', 'url(img/specialization_img3.png)').fadeIn();
+		$('.specialization__txt_i3').css('opacity', '1');
 	});
 	$('.specialization__item_i3').mouseout(function() {
-		$('.specialization__bg').css('background-image', '');
+		$('.specialization__bg').fadeOut();
+		$('.specialization__txt_i3').css('opacity', '0');
 	});
+
+	// Тултип в тесте
+	$('[data-toggle="tooltip"]').tooltip();
+
+	// Пошаговая форма
+	var steps = $(".test-wrap-form").children(".step"); // находим все шаги формы
+	var numb = $(".test-wrap-list").children(".test-wrap-list__item"); // находим все шаги формы
+	$(steps[0]).show(); // показываем первый шаг
+	$(numb[0]).addClass('active');
+	var current_step = 0; // задаем текущий шаг
+	$(".test-wrap-form__btn.next").click(function(){	// Событие клика на ссылку "Следующий шаг"
+			if (current_step == steps.length-2) { // проверяем, будет ли следующий шаг последним
+				$(this).hide(); // скрываем ссылку "Следующий шаг"
+				$(".submit").show().css('display', 'block'); // показываем кнопку "Регистрация"
+			}
+			current_step++; // увеличиваем счетчик текущего слайда
+			changeStep(current_step); // меняем шаг
+	});
+	function changeStep(i) { // функция смены шага
+		$(steps).hide(); // скрываем все шаги
+		$(steps[i]).show(); // показываем текущий
+		$(numb).removeClass('active');
+		$(numb[i]).addClass('active'); // показываем текущий
+	}
 
 });

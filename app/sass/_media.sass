@@ -10,6 +10,9 @@
 	.head-project
 		&:after, &:before
 			width: 77%
+	.step
+		&__block
+			max-width: 1150px
 
 //Large: ≥1200px  max-width: 1439px
 +media-breakpoint-down(lg)
@@ -38,6 +41,13 @@
 	.cprt
 		text-align: center
 		margin: 40px auto 0
+	.test-wrap
+		min-width: 992px
+	.specialization
+		&__txt
+			&_i1, &_i2, &_i3
+				top: 200px
+				left: 0%
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
@@ -65,6 +75,10 @@
 	.specialization
 		&__note
 			display: none
+		&__txt
+			max-width: 380px
+			&_i1, &_i2, &_i3
+				top: 100px
 	.team
 		&__note
 			display: none
@@ -78,6 +92,8 @@
 		&__call
 			&:first-child
 				margin-top: 40px
+	.test-wrap
+		min-width: 768px
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
@@ -111,6 +127,21 @@
 		&__item
 			padding: 10px
 			margin: 0 25px
+	.test-wrap
+		min-width: 100%
+	.step
+		&__form
+			display: block
+		.rfield
+		.rline
+			display: table
+			margin: 0 auto 20px
+			&:last-child
+				margin-left: auto
+				margin-bottom: 0
+	.specialization
+		&__txt
+			display: none
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
@@ -152,4 +183,26 @@
 			display: block
 			margin: 0
 			padding: 10px 0
+	.test-wrap-list
+		&__item
+			margin-bottom: 20px
+			&:before, &:after
+				display: none
+			&:last-child
+				margin-bottom: 0
+			span
+				width: 34px
+				height: 34px
+				line-height: 34px
+				font-size: 16px
+	.radio
+		display: block
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		&_margin
+			margin: 0 auto 20px
+	.test-wrap-form
+		&__btn
+			font-size: 14px
 

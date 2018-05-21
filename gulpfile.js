@@ -38,10 +38,13 @@ gulp.task('js', function() {
 		'app/libs/required_fields/jquery.maskedinput.min.js',
 		'app/libs/required_fields/required_fields.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
-		'app/js/common.js', // Always at the end
+		'app/libs/popper.js/dist/umd/popper.js',
+		'app/libs/bootstrap-tooltip/util.js',
+		'app/libs/bootstrap-tooltip/tooltip.js',
+		'app/js/common.js' // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
+	//.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });

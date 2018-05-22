@@ -16,6 +16,22 @@
 
 //Large: ≥1200px  max-width: 1439px
 +media-breakpoint-down(lg)
+	.about-header
+		&__ttl
+			width: 220px
+			height: 200px
+			&:before
+				width: 220px
+	.numbs
+		&__ttl
+			width: 360px
+			height: 360px
+			&:before
+				left: 35%
+		&-item
+			&__txt
+				font-size: 12px
+
 
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
@@ -48,6 +64,48 @@
 			&_i1, &_i2, &_i3
 				top: 200px
 				left: 0%
+	.about-header
+		&__ttl
+			width: auto
+			height: auto
+			display: block
+			vertical-align: top
+			border: none
+			text-align: left
+			&:before
+				content: ''
+				left: -120px
+
+		&__txt
+			margin-top: 30px
+	.numbs
+		&__ttl
+			&:before
+				display: none
+		&-item
+			min-height: 136px
+	.about-header
+		&__img
+			padding: 40px 0
+		&__ttl
+			&:before
+				left: 0
+		&__txt
+			margin-top: 0
+			margin-bottom: 30px
+	.quotes-item
+		&__txt
+			font-size: 14px
+	.numbs
+		&__ttl
+			width: auto
+			height: auto
+			border: none
+			text-align: left
+			font-size: 20px
+		&-item
+			&__numb
+				font-size: 28px
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
@@ -94,6 +152,9 @@
 				margin-top: 40px
 	.test-wrap
 		min-width: 768px
+	.quotes-item
+		&_i1
+			margin-top: 30px
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
@@ -142,6 +203,23 @@
 	.specialization
 		&__txt
 			display: none
+	.quotes-item
+		&_i2
+			margin-top: 30px
+			.quotes-item__txt
+				margin-top: 30px
+		&_i3
+			margin-top: 0
+	.numbs
+		&__ttl
+			display: block
+			text-align: center
+			margin-bottom: 30px
+		&-item
+			min-height: 94px
+			&__numb
+				&:before
+					display: none
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
@@ -205,4 +283,15 @@
 	.test-wrap-form
 		&__btn
 			font-size: 14px
-
+	.about-header
+		&__ttl
+			margin-bottom: 30px
+	.quotes
+		&__ttl
+			font-size: 22px
+	.numbs
+		&-item
+			&__numb
+				text-align: center
+			&__txt
+				text-align: center

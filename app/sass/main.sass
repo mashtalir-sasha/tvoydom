@@ -955,6 +955,113 @@ button
 			letter-spacing: .1em
 			text-transform: uppercase
 
+// Блог
+.main-blog
+	padding-top: 107px
+	&__ttl
+		font-family: "Ubuntu-Bold", sans-serif
+		font-size: 34px
+		padding: 60px 0
+	&__month
+		font-family: $medium
+		font-size: 22px
+		margin-bottom: 60px
+	&__line
+		border: none
+		margin: 60px 0
+		height: 1px
+		background-color: #4f4f4f
+	&-nav
+		overflow: hidden
+		margin-bottom: 60px
+		&__prev
+			width: 50%
+			float: left
+			color: #4f4f4f
+			&:hover
+				color: danken(#4f4f4f, 30%)
+		&__next
+			width: 50%
+			float: right
+			text-align: right
+			color: #4f4f4f
+			&:hover
+				color: danken(#4f4f4f, 30%)
+
+.main-article
+	&__img
+		margin-bottom: 30px
+	&__ttl
+		margin-bottom: 15px
+		a
+			font-family: $bold
+			font-size: 20px
+			color: #000
+	&__txt
+		font-size: 14px
+		margin-bottom: 30px
+	&__link
+		font-family: $medium
+		color: #4f4f4f
+		&:hover
+			color: danken(#4f4f4f, 30%)
+
+.popular
+	margin-bottom: 60px
+	&:last-child
+		margin-bottom: 0
+	&__ttl
+		margin-bottom: 15px
+		a
+			font-size: 16px
+			font-family: $bold
+			color: #000
+	&__txt
+		font-size: 14px
+		margin-bottom: 30px
+	&__link
+		font-family: $medium
+		color: #4f4f4f
+		&:hover
+			color: danken(#4f4f4f, 30%)
+
+.calendar
+	width: 100%
+	caption
+		font-family: $medium
+		font-size: 18px
+		padding: 15px 0
+		caption-side: top
+		color: #0a0a0a
+		text-align: center
+	& thead
+		background: #f8f8f8
+		color: #0a0a0a
+		font-family: $medium
+		th
+			font-weight: normal
+	& th, & td
+		padding-top: 10px
+		padding-bottom: 10px
+		text-align: center
+		a
+			font-family: $bold
+			color: #000
+	& tr:nth-child(even), & tfoot
+		background-color: #f1f1f1
+	&__link
+		a
+			font-family: $medium !important
+
+.article-content
+	&__ttl
+		font-family: "Ubuntu-Bold", sans-serif
+		font-size: 28px
+		margin-bottom: 60px
+	&__txt
+		margin-top: 30px
+
+
 // Задать вопрос
 .question
 	padding: 90px 0

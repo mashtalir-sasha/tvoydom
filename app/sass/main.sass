@@ -23,7 +23,7 @@ body
 	input, textarea
 		outline: none
 
-.content
+.site-content
 	overflow: hidden
 
 .img-responsive
@@ -63,18 +63,19 @@ button
 		cursor: pointer
 		position: relative
 		margin: 0 auto
-		width: 72px
-		height: 45px
+		width: 56px
+		height: 35px
 		padding: 10px 8px
 		border: 2px solid #828282
 		background-image: url(../img/mnu-btn.svg)
-		background-size: 50px 29px
+		background-size: 40px 15px
 		background-repeat: no-repeat
 		background-position: center center
 		&__txt
 			text-align: center
 			transform: rotate(-90deg)
 			position: absolute
+			top: 5px
 			right: -35px
 			font-size: 14px
 	&-tel
@@ -102,6 +103,292 @@ button
 			&:hover
 				background-color: darken($accent, 10%)
 				color: darken(#fff, 10%)
+
+.menu
+	margin: 0
+	max-height: 0
+	overflow: hidden
+	transition: all ease .3s
+	&.show
+		margin: 15px 0 3px
+		max-height: 24px
+	&-list
+		padding-left: 0
+		margin-bottom: 0
+		list-style-type: none
+		&__item
+			display: inline-block
+			margin-right: 15px
+			a
+				color: #4f4f4f
+				&:hover
+					color: darken(#4f4f4f, 30%)
+	&__fb
+		display: inline-block
+		float: right
+		width: 24px
+		height: 24px
+		background-image: url(../img/fb.svg)
+		background-size: 24px 24px
+		background-position: center center
+		margin-right: 10px
+	&__eml
+		display: inline-block
+		float: right
+		width: 24px
+		height: 24px
+		background-image: url(../img/eml.svg)
+		background-size: 24px 24px
+		background-position: center center
+
+// Главная
+.main-head
+	position: relative
+	min-height: 100vh
+	padding-top: 107px
+	background-image: url(../img/main-head_bg.jpg)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: rgba(#080808, .1)
+	.h100
+		min-height: calc(100vh - 107px)
+	&__ttl
+		font-family: $bold
+		font-size: 30px
+		text-transform: uppercase
+		color: #fff
+	&__btn
+		display: block
+		width: 240px
+		margin-top: 80px
+		background-color: #F7D15E
+		padding: 12px 0
+		text-align: center
+		font-family: $medium
+		font-size: 18px
+		color: #333333
+		border-radius: 24px
+		transition: all ease .3s
+		&:hover
+			color: darken(#333333, 20%)
+			background-color: darken(#F7D15E, 10%)
+	&__romb
+		width: 100%
+		height: 145%
+		background-image: url(../img/main-head_romb.svg)
+		background-size: contain
+		background-position: center center
+		background-repeat: no-repeat
+		position: absolute
+		top: -190px
+		right: -500px
+
+.advantages
+	position: relative
+	padding: 90px 0
+	&:before
+		content: ''
+		width: 58.33333%
+		height: 100%
+		margin-right: -15px
+		background-color: #F2F2F2
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+	&__ttl
+		max-width: 460px
+		font-family: $bold
+		font-size: 25px
+		color: #333333
+		text-transform: uppercase
+		padding: 90px 50px
+		border: 4px solid #4F4F4F
+	&-item
+		margin-bottom: 40px
+		&_left
+			max-width: 300px
+			width: 49%
+			float: left
+		&_right
+			max-width: 300px
+			width: 49%
+			float: right
+		&_last
+			margin-bottom: 0
+		&__ico
+			width: 50px
+			height: 50px
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: 50px 50px
+			margin-bottom: 20px
+			&_i1
+				background-image: url(../img/main-ico1.svg)
+			&_i2
+				background-image: url(../img/main-ico2.svg)
+			&_i3
+				background-image: url(../img/main-ico3.svg)
+			&_i4
+				background-image: url(../img/main-ico4.svg)
+			&_i5
+				background-image: url(../img/main-ico5.svg)
+		&__txt
+			font-size: 14px
+
+.own-project
+	position: relative
+	padding-top: 90px
+	background-color: #43D08C
+	&:before
+		content: ''
+		width: 33.33333%
+		height: 100%
+		background-color: #4F4F4F
+		position: absolute
+		top: 0
+		right: -15px
+	&__ttl
+		position: relative
+		font-family: $bold
+		font-size: 24px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 40px
+		&:before
+			content: ''
+			width: 250px
+			height: 3px
+			background-color: #fff
+			position: absolute
+			top: 30px
+			left: -280px
+	&__txt
+		font-size: 14px
+		color: #fff
+		margin-bottom: 90px
+
+.home-blog
+	position: relative
+	padding: 90px 0
+	&__romb
+		z-index: -1
+		width: 100%
+		height: 145%
+		background-image: url(../img/home-blog_romb.svg)
+		background-size: contain
+		background-position: center center
+		background-repeat: no-repeat
+		position: absolute
+		top: -35%
+		right: -450px
+	&__ttl
+		font-family: $bold
+		font-size: 25px
+		letter-spacing: .05em
+		text-transform: uppercase
+		color: #333333
+		margin-bottom: 30px
+	&-item
+		&__bg
+			position: relative
+			height: 360px
+			background-position: center center
+			background-size: cover
+			background-repeat: no-repeat
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				background-color: rgba(#000, .4)
+		&__ttl
+			position: relative
+			padding: 50px 30px
+			font-family: $regular
+			font-size: 24px
+			color: #fff
+			padding-bottom: 30px
+			&:before
+				content: ''
+				width: 360px
+				height: 3px
+				background-color: #fff
+				position: absolute
+				bottom: 0
+				left: 30px
+		&__wrap
+			background-color: #4F4F4F
+			padding: 30px
+		&__txt
+			letter-spacing: .02em
+			color: #fff
+			margin-bottom: 30px
+		&__btn
+			display: block
+			max-width: 240px
+			background-color: $accent
+			padding: 10px 40px
+			font-family: $bold
+			text-align: center
+			color: #fff
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: darken($accent, 10%)
+				color: darken(#fff, 10%)
+
+.main-popular
+	&__name
+		font-family: $bold
+		font-size: 25px
+		margin-bottom: 30px
+	&__bg
+		height: 250px
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+	&__wrap
+		background-color: #F2F2F2
+		padding: 30px
+	&__ttl
+		position: relative
+		font-family: $bold
+		font-size: 20px
+		color: #4F4F4F
+		padding-bottom: 20px
+		margin-bottom: 20px
+		&:before
+			content: ''
+			width: 100%
+			height: 2px
+			background-color: #828282
+			position: absolute
+			bottom: 0
+			left: 0
+	&__txt
+		margin-bottom: 30px
+	&__link
+		position: relative
+		font-family: $medium
+		font-size: 18px
+		color: $accent
+		padding-bottom: 10px
+		&:before
+			content: ''
+			width: 100%
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
 
 // Проекты
 .head-project
@@ -233,10 +520,10 @@ button
 	position: relative
 	padding-top: 90px
 	&__note
+		width: 160px
 		position: absolute
-		right: -80px
-		bottom: 196px
-		padding-left: 150px
+		right: -45px
+		bottom: 240px
 		font-family: "Ubuntu-Bold", sans-serif
 		font-size: 20px
 		color: $accent
@@ -247,8 +534,8 @@ button
 			width: 130px
 			background-color: $accent
 			position: absolute
-			top: 11px
-			left: 0
+			top: 12px
+			left: -140px
 	&__romb
 		width: 120%
 		height: 120%
@@ -389,10 +676,10 @@ button
 	position: relative
 	padding: 90px 0
 	&__note
+		width: 160px
 		position: absolute
-		right: -80px
-		bottom: 196px
-		padding-left: 150px
+		right: -45px
+		bottom: 240px
 		font-family: "Ubuntu-Bold", sans-serif
 		font-size: 20px
 		color: $accent
@@ -403,8 +690,8 @@ button
 			width: 130px
 			background-color: $accent
 			position: absolute
-			top: 11px
-			left: 0
+			top: 12px
+			left: -140px
 	&-img
 		position: relative
 		img
@@ -466,10 +753,10 @@ button
 		top: 0
 		left: 0
 	&__note
+		width: 160px
 		position: absolute
-		right: -80px
-		bottom: 196px
-		padding-left: 150px
+		right: -45px
+		bottom: 240px
 		font-family: "Ubuntu-Bold", sans-serif
 		font-size: 20px
 		color: #fff
@@ -480,8 +767,8 @@ button
 			width: 130px
 			background-color: #fff
 			position: absolute
-			top: 11px
-			left: 0
+			top: 12px
+			left: -140px
 	&__ttl
 		position: relative
 		display: table
@@ -551,10 +838,10 @@ button
 	position: relative
 	padding: 90px 0
 	&__note
+		width: 160px
 		position: absolute
-		right: -80px
-		bottom: 196px
-		padding-left: 150px
+		right: -45px
+		bottom: 240px
 		font-family: "Ubuntu-Bold", sans-serif
 		font-size: 20px
 		color: $accent
@@ -565,8 +852,8 @@ button
 			width: 130px
 			background-color: $accent
 			position: absolute
-			top: 11px
-			left: 0
+			top: 12px
+			left: -140px
 	&__ttl
 		color: #176644
 		font-family: $bold
@@ -734,7 +1021,7 @@ button
 		position: relative
 		&:last-child
 			margin-left: 20px
-	.rfield
+	.field
 		border: none
 		outline: none
 		min-width: 290px
@@ -1061,7 +1348,6 @@ button
 	&__txt
 		margin-top: 30px
 
-
 // Задать вопрос
 .question
 	padding: 90px 0
@@ -1204,5 +1490,82 @@ button
 	transition: all ease .3s
 	&:hover
 		color: darken(#fff, 10%)
+
+// Модальные окна
+.modal-form
+	max-width: 700px
+	position: relative
+	background-image: url(../img/test_bg.png)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 30px 60px
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.57)
+		position: absolute
+		top: 0
+		left: 0
+	&__ttl
+		position: relative
+		color: #fff
+		text-align: center
+		font-family: "Ubuntu-Bold", sans-serif
+		font-size: 25px
+		margin-bottom: 30px
+	&__txt
+		position: relative
+		max-width: 500px
+		margin: 20px auto 40px
+		text-align: center
+		color: #fff
+	.rline
+		display: table
+		margin: 0 auto 15px
+		position: relative
+	.field
+		border: none
+		outline: none
+		min-width: 290px
+		display: block
+		background-color: #EDEDED
+		text-align: center
+		padding: 12px 0
+		border-radius: 25px
+	.textarea
+		overflow: hidden
+		border: none
+		outline: none
+		min-width: 290px
+		min-height: 150px
+		display: block
+		background-color: #EDEDED
+		padding: 12px
+		border-radius: 25px
+	.rfield_error
+		visibility: hidden
+		position: absolute
+		bottom: 2px
+		right: 15px
+		color: red
+		font-size: 12px
+	&__btn
+		position: relative
+		cursor: pointer
+		margin: 0 auto
+		display: block
+		width: 290px
+		background-color: $accent
+		padding: 10px 40px
+		font-family: $medium
+		text-align: center
+		color: #fff
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			background-color: darken($accent, 10%)
+			color: darken(#fff, 10%)
 
 @import "media" // Always at the end

@@ -32,7 +32,6 @@
 			&__txt
 				font-size: 12px
 
-
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
 	.head-project
@@ -109,6 +108,19 @@
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.menu
+		&.show
+			max-height: 236px
+		&__fb
+			float: none
+		&__eml
+			float: none
+		&-list
+			&__item
+				display: block
+				margin-bottom: 5px
+				&:last-child
+					margin-bottom: 30px
 	.head-project
 		&:before, &:after
 			width: 100%
@@ -311,3 +323,7 @@
 			padding: 10px 0
 		&__next
 			text-align: left
+	.modal-form
+		padding: 30px 15px
+		&__ttl
+			font-size: 22px

@@ -34,6 +34,25 @@
 
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.triger-bg
+		&__info
+			float: left
+			margin-left: 30px
+		&__txt
+			margin-top: 15px
+			padding-top: 15px
+	.own-project
+		&__ttl
+			&:before
+				display: none
+	.home-blog
+		&-item
+			&__ttl
+				font-size: 20px
+				padding: 15px
+				&:before
+					left: 15px
+					width: calc(100% - 30px)
 	.head-project
 		&:before, &:after
 			width: 70%
@@ -105,6 +124,9 @@
 		&-item
 			&__numb
 				font-size: 28px
+	.projects
+		&__note
+			display: none
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
@@ -113,14 +135,29 @@
 			max-height: 236px
 		&__fb
 			float: none
+			margin-right: 0
 		&__eml
 			float: none
+			margin-right: 10px
 		&-list
 			&__item
 				display: block
 				margin-bottom: 5px
 				&:last-child
 					margin-bottom: 30px
+	.advantages
+		&__ttl
+			margin: 0 auto 30px
+		&:before
+			width: calc(50% + 15px)
+	.triger-bg
+		&__txt
+			float: none
+			padding: 0
+			&:before
+				display: none
+	.home-blog-item
+		margin-bottom: 30px
 	.head-project
 		&:before, &:after
 			width: 100%
@@ -135,6 +172,11 @@
 		&__btn
 			&:before
 				display: none
+	.projects-slider
+		&-item
+			&__info
+				opacity: 1
+				background-color: rgba(#333, .6)
 	.docs
 		&__note
 			display: none
@@ -179,6 +221,28 @@
 			max-width: 160px
 		&-btn
 			float: right
+	.main-head
+		&__ttl
+			font-size: 26px
+	.advantages
+		&__ttl
+			font-size: 22px
+	.triger
+		&__ttl
+			font-size: 22px
+	.triger-link
+		width: 15px
+		height: 15px
+		margin-top: -15px
+		margin-left: -15px
+	.own-project
+		&:before
+			width: calc(50% + 15px)
+		&__ttl
+			font-size: 22px
+	.main-popular
+		&_first
+			margin-bottom: 30px
 	.head-project
 		padding-top: 90px
 		&__ttl
@@ -246,10 +310,49 @@
 		&__logo
 			max-width: 100px
 		&-btn
-			width: 60px
-			height: 40px
-			background-size: 35px 20px
 			margin-right: 20px
+	.main-head
+		&__ttl
+			font-size: 22px
+	.advantages
+		&__ttl
+			font-size: 20px
+			border: none
+			padding: 0
+		&:before
+			display: none
+		&-item
+			&_left
+				float: none
+				width: 100%
+			&_right
+				float: none
+				width: 100%
+			&_last
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+	.triger
+		&__ttl
+			font-size: 20px
+	.own-project
+		&__ttl
+			font-size: 20px
+		&:before
+			display: none
+		&__txt
+			margin-bottom: 40px
+		&__img
+			margin-bottom: 30px
+	.home-blog
+		&-item
+			&__ttl
+				font-size: 18px
+			&__txt
+				font-size: 14px
+	.main-popular
+		&__name
+			font-size: 20px
 	.head-project
 		padding-top: 63px
 		&__ttl
@@ -260,6 +363,13 @@
 		&__btn
 			float: none
 			margin: 40px auto 0
+	.main-popular
+		&__ttl
+			font-size: 18px
+		&__txt
+			font-size: 14px
+		&__link
+			font-size: 16px
 	.docs
 		&__ttl
 			font-size: 20px
@@ -269,6 +379,12 @@
 		padding-top: 0
 		&__ttl
 			font-size: 20px
+	.projects-slider
+		&-item
+			&__ttl
+				padding: 30px 15px
+				&:after
+					left: 15px
 	.question-wrap
 		&__ttl
 			font-size: 20px

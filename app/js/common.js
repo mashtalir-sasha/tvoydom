@@ -90,4 +90,11 @@ $(function() {
 		$(numb[i]).addClass('active'); // показываем текущий
 	}
 
+	var trigerHeight = $('.triger-bg__patern').innerHeight();
+	$('.triger-bg').css('height', trigerHeight);
+	$(window).on('resize', function() {
+		var trigerHeight = $('.triger-bg__patern').innerHeight();
+		$('.triger-bg').css('height', trigerHeight);
+	});
+
 });

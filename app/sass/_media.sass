@@ -213,6 +213,12 @@
 		padding-top: 90px
 	.blog-sidebar
 		margin-bottom: 60px
+	.details-info
+		&:before
+			width: 100vw
+	.slider-nav 
+		.slick-dots
+			top: -30px
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
@@ -303,6 +309,11 @@
 			&__numb
 				&:before
 					display: none
+	.project-details
+		padding-top: 90px
+		&__ttl
+			&:after
+				width: 100%
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
@@ -443,3 +454,16 @@
 		padding: 30px 15px
 		&__ttl
 			font-size: 22px
+	.slider-nav
+		.slick-dots
+			li
+				width: 30px
+	.project-details
+		padding-top: 63px
+	.details-tab
+		&__item
+			display: block
+			margin-right: 0
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
